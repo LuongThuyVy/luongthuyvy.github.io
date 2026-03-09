@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Vy Thuy Luong</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+background:#0b0b0b;
+color:#f5f5f5;
+overflow-x:hidden;
+}
+
+section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:80px 10vw;
+}
+
+.hero{text-align:center}
+
+.hero h1{
+font-size:72px;
+letter-spacing:6px;
+font-weight:700;
+}
+
+.hero p{
+margin-top:16px;
+font-size:20px;
+color:#bdbdbd;
+}
+
+.categories-title{
+font-size:14px;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#8a8a8a;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.card{
+background:#111;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,.6);
+cursor:pointer;
+transition:.25s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 45px rgba(0,0,0,.8);
+}
+
+.sidebar{
+position:fixed;
+left:60px;
+top:50%;
+transform:translateY(-50%);
+width:160px;
+opacity:0;
+pointer-events:none;
+transition:opacity .4s ease;
+}
+
+.sidebar.visible{
+opacity:1;
+pointer-events:auto;
+}
+
+.menu-item{
+margin:16px 0;
+cursor:pointer;
+color:#6f6f6f;
+transition:.2s;
+font-size:14px;
+}
+
+.menu-item:hover{color:#fff}
+
+.menu-item.active{
+color:#ffffff;
+font-weight:600;
+}
+
+.content-section{padding-left:260px}
+
+.section-title{
+font-size:48px;
+font-weight:700;
+text-align:center;
+margin-bottom:70px;
+}
+
+.block{
+max-width:760px;
+margin:0 auto 30px auto;
+line-height:1.7;
+}
+
+.block h3{
+font-size:22px;
+margin-bottom:8px;
+}
+
+.block p{color:#bdbdbd}
+
+.list-item{
+max-width:760px;
+margin:0 auto 12px auto;
+color:#bdbdbd;
+}
+
+footer{
+text-align:center;
+padding:40px;
+color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="sidebar" id="sidebar">
+<div class="menu-item" data-link="home">Home</div>
+<div class="menu-item" data-link="projects">Projects</div>
+<div class="menu-item" data-link="skills">Skills</div>
+<div class="menu-item" data-link="experience">Experience</div>
+<div class="menu-item" data-link="about">About</div>
+<div class="menu-item" data-link="education">Education</div>
+<div class="menu-item" data-link="certifications">Certifications</div>
+</div>
+
+<section id="home" class="hero">
+<h1>VY THUY LUONG</h1>
+<p>Software Tester</p>
+</section>
+
+<section id="categories">
+<div class="categories-title">Categories</div>
+<div class="grid">
+<div class="card" onclick="scrollToSection('projects')">Projects</div>
+<div class="card" onclick="scrollToSection('skills')">Technical Skills</div>
+<div class="card" onclick="scrollToSection('experience')">Experience</div>
+<div class="card" onclick="scrollToSection('about')">About Me</div>
+</div>
+</section>
+
+<section id="projects" class="content-section" data-section>
+<div class="section-title">Projects</div>
+
+<div class="block">
+<h3>Tutoring Service Website</h3>
+<p>Group academic project building a platform where tutors can publish their services and students can browse and register for tutoring sessions. Responsibilities included collecting requirements, modeling system workflows using use case and activity diagrams, designing wireframes and conducting functional testing.</p>
+<p><strong>Role:</strong> Business Analyst & Tester | 03/2024 – 05/2024</p>
+</div>
+
+<div class="block">
+<h3>Online Quiz Website</h3>
+<p>Individual project to develop a web application for online multiple-choice quizzes. The project included requirement analysis, system design, database structure, UI design in Figma and development using React and Laravel.</p>
+<p><strong>Role:</strong> Developer, Business Analyst & Tester | 06/2024 – 08/2024</p>
+</div>
+
+</section>
+
+<section id="skills" class="content-section" data-section>
+<div class="section-title">Technical Skills</div>
+
+<div class="list-item">Manual Testing, Regression Testing, User Acceptance Testing</div>
+<div class="list-item">Test case creation and structured test plan execution</div>
+<div class="list-item">Bug reporting and issue tracking</div>
+<div class="list-item">Database validation and data consistency testing</div>
+<div class="list-item">Programming: C# (basic), Python (basic)</div>
+<div class="list-item">Tools: Postman, GitHub, Visual Studio Code</div>
+<div class="list-item">Databases: Oracle, SQL Server, MySQL, PostgreSQL</div>
+
+</section>
+
+<section id="experience" class="content-section" data-section>
+<div class="section-title">Working Experience</div>
+
+<div class="block">
+<h3>FPT Software – Tester</h3>
+<p><strong>Dec 2025 – Present</strong></p>
+<p>Working on enterprise-level business process management systems. Responsible for designing and executing manual test cases, validating system functionality, verifying database consistency in Oracle and collaborating closely with developers to resolve defects.</p>
+</div>
+
+<div class="list-item">• Creating and maintaining detailed test cases and test plans</div>
+<div class="list-item">• Executing manual testing for desktop application modules</div>
+<div class="list-item">• Reporting and tracking bugs</div>
+<div class="list-item">• Validating database input/output and data consistency</div>
+
+</section>
+
+<section id="about" class="content-section" data-section>
+<div class="section-title">About Me</div>
+
+<div class="block">
+<p>Nearly 1 year of experience in manual testing with strong attention to software quality and reliability. Skilled in creating and executing detailed test cases, preparing structured test plans and reporting bugs effectively.</p>
+
+<p>Experienced in validating data and ensuring data consistency using Oracle databases. Comfortable collaborating with development and project teams and working within large-scale project environments.</p>
+</div>
+
+<div class="block">
+<h3>Specialties</h3>
+<p>Manual testing for Winform desktop applications and web applications, detailed test case design and effective defect tracking.</p>
+</div>
+
+</section>
+
+<section id="education" class="content-section" data-section>
+<div class="section-title">Education</div>
+
+<div class="block">
+<h3>Bachelor of Engineering in Information Technology</h3>
+<p>Post and Telecommunication Institute of Technology – 2025</p>
+<p>GPA: 3.15 / 4.0</p>
+</div>
+
+</section>
+
+<section id="certifications" class="content-section" data-section>
+<div class="section-title">Certifications & Languages</div>
+
+<div class="block">
+<h3>Certification</h3>
+<p>VSTEP English Certification – Level 4 (B2)</p>
+</div>
+
+<div class="block">
+<h3>Languages</h3>
+<p>Vietnamese – Native</p>
+<p>English – Fluent</p>
+</div>
+
+</section>
+
+<footer>
+© 2026 Vy Thuy Luong
+</footer>
+
+<script>
+function scrollToSection(id){
+ document.getElementById(id).scrollIntoView({behavior:'smooth'})
+}
+
+const menuItems=document.querySelectorAll('.menu-item')
+
+menuItems.forEach(item=>{
+ item.onclick=()=>{
+ const id=item.dataset.link
+ scrollToSection(id)
+ }
+})
+
+const sections=document.querySelectorAll('[data-section], #home')
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+ if(entry.isIntersecting){
+ const id=entry.target.id
+ menuItems.forEach(m=>{
+ m.classList.toggle('active',m.dataset.link===id)
+ })
+ }
+ })
+},{threshold:0.55})
+
+sections.forEach(section=>observer.observe(section))
+
+const sidebar=document.getElementById('sidebar')
+const trigger=document.getElementById('projects')
+
+const sidebarObserver=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting || entry.boundingClientRect.top < 0){
+   sidebar.classList.add('visible')
+  }else{
+   sidebar.classList.remove('visible')
+  }
+ })
+},{threshold:0})
+
+sidebarObserver.observe(trigger)
+if(section.id === "categories"){
+    sidebar.classList.remove("visible")
+}
+else if(section.id === "projects" || section.id === "skills" || section.id === "about" || section.id === "contact"){
+    sidebar.classList.add("visible")
+}
+
+</script>
+
+</body>
+</html>
